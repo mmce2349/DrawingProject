@@ -24,4 +24,8 @@ import artController.ArtController;
 public class DrawingCanvas extends JPanel
 {
 private ArrayList<Polygon> triangleList;
+private ArrayList<Polygon> polygonList;
+private ArrayList<Ellipse2D> ellipseList;
+private ArrayList<Rectangle> rectangleList;
+private ArtController app;
 }
