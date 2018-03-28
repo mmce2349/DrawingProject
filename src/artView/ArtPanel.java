@@ -56,6 +56,9 @@ public class ArtPanel extends JPanel
 		canvas = new ShapeCanvas(app);
 		sliderPanel = new JPanel();
 		buttonPanel = new JPanel(new GridLayout(0,1));
+		appLayout.putConstraint(SpringLayout.WEST, buttonPanel, 40, SpringLayout.WEST, this);
+		appLayout.putConstraint(SpringLayout.WEST, sliderPanel, 49, SpringLayout.EAST, buttonPanel);
+		appLayout.putConstraint(SpringLayout.SOUTH, sliderPanel, 0, SpringLayout.SOUTH, buttonPanel);
 		
 		triangleButton = new JButton("add triangle");
 		rectangleButton = new JButton(" add rectangle");
