@@ -28,4 +28,11 @@ private ArrayList<Polygon> polygonList;
 private ArrayList<Ellipse2D> ellipseList;
 private ArrayList<Rectangle> rectangleList;
 private ArtController app;
+
+private BufferedImage canvasImage;
+
+	public ShapeCanvas(ArtController app)
+	{
+		
+	}
 }
