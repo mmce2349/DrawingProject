@@ -16,7 +16,7 @@ public class ArtFrame extends JFrame
 	{
 		this.setSize(800, 800);
 		this.setTitle("DrawingProject");
-		//this.setContentPane(appPanel);
+		this.setContentPane(appPanel);
 		this.setResizable(true);
 		this.setVisible(true);
 		
