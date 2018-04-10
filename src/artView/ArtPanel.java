@@ -207,7 +207,7 @@ public class ArtPanel extends JPanel
 			canvas.addShape(triangle);
 			}
 		});
-		}
+		
 	}
 	private Rectangle createRectangle()
 	{
