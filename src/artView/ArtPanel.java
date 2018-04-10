@@ -165,8 +165,11 @@ public class ArtPanel extends JPanel
 		
 		});
 		clearButton.addActionListener(click -> canvas.clear());
+		
 		saveButton.addActionListener(click -> canvas.save());
+		
 		colorButton.addActionListener(click -> canvas.changeBackground());
+		
 		scaleSlider.addChangeListener(new ChangeListener()
 				{
 				public void stateChanged(ChangeEvent e)
@@ -177,5 +180,17 @@ public class ArtPanel extends JPanel
 					}
 				}
 				});
+		edgeSlider.addChangeListener(new ChangeListener()
+				{
+				public void stateChanged(ChangeEvent e)
+				{
+					if(!edgeSlider.getValueIsAdjusting())
+					{
+						currentEdgeCount = edgeSlider.getValue();
+					}
+				}
+				});
+			
+		
 	}
 }
