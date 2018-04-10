@@ -47,7 +47,26 @@ public class ShapeCanvas extends JPanel
 		}
 		public void addShape(Shape current)
 		{
-			
+			if(current instanceof Polygon)
+			{
+				if(((Polygon)current).xpoints.length==3)
+				{
+					triangleList.add((Polygon)current);
+				}
+				else
+				{
+					polygonList.add((Polygon)current);
+				}
+			}
+			else if(current instanceof Ellipse2D)
+			{
+				ellipseList.add((Ellipse2D)current);
+			}
+			else
+			{
+				rectangleList.add((Rectangle)current);
+			}
+			updateImage();
 		}
 		public void clear()
 		{
@@ -67,6 +86,37 @@ public class ShapeCanvas extends JPanel
 		}
 		private void updateImage()
 		{
+			Graphics2D currentGraphics = (Graphics2D) canvasImage.getGraphics();
+			for(Ellipse2D current : ellipseList)
+			{
+				currentGraphics.setColor(randomColor());
+				currentGraphics.setStroke(new BasicStroke(2));
+				currentGraphics.fill(current);
+				currentGraphics.setColor(randomColor());
+				currentGraphics.draw(current);
+			}
+			for(Polygon currentTriangle : triangleList)
+			{
+				currentGraphics.setColor(randomColor());
+			
+				currentGraphics.fill(currentTriangle);
+				
+			}
+			for(Polygon currentPolygon : polygonList)
+			{
+				currentGraphics.setColor(randomColor());
+				currentGraphics.setStroke(new BasicStroke(4));
+				currentGraphics.fill(currentPolygon);
+				
+			}
+			for(Rectangle currentRectangle : rectangleList)
+			{
+				currentGraphics.setColor(randomColor());
+				currentGraphics.fill(currentRectangle);
+				
+			}
+			currentGraphics.dispose();
+			repaint();
 			
 		}
 		@Override
