@@ -155,6 +155,27 @@ public class ArtPanel extends JPanel
 	}
 	private void setupListeners()
 	{
+		ellipseButton.addActionListener(new ActionListener() 
+		{
+			public void actionPerformed(ActionEvent click)
+			{
+			Ellipse2D ellipse = createEllipse();
+			canvas.addShape(ellipse);
+			}
 		
+		});
+		clearButton.addActionListener(click -> canvas.clear());
+		saveButton.addActionListener(click -> canvas.save());
+		colorButton.addActionListener(click -> canvas.changeBackground());
+		scaleSlider.addChangeListener(new ChangeListener()
+				{
+				public void stateChanged(ChangeEvent e)
+				{
+					if(!scaleSlider.getValueIsAdjusting())
+					{
+						currentScale = scaleSlider.getValue();
+					}
+				}
+				});
 	}
 }
