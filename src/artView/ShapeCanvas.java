@@ -1,5 +1,4 @@
 package artView;
-
 import javax.swing.*;
 import java.awt.BasicStroke;
 import java.awt.Color;
@@ -20,19 +19,20 @@ import javax.swing.JFileChooser;
 import javax.swing.JPanel;
 
 import artController.ArtController;
-
-public class DrawingCanvas extends JPanel
+public class ShapeCanvas extends JPanel
 {
-private ArrayList<Polygon> triangleList;
-private ArrayList<Polygon> polygonList;
-private ArrayList<Ellipse2D> ellipseList;
-private ArrayList<Rectangle> rectangleList;
-private ArtController app;
+	
+	private ArrayList<Polygon> triangleList;
+	private ArrayList<Polygon> polygonList;
+	private ArrayList<Ellipse2D> ellipseList;
+	private ArrayList<Rectangle> rectangleList;
+	private ArtController app;
 
-private BufferedImage canvasImage;
+	private BufferedImage canvasImage;
 
-	public ShapeCanvas(ArtController app)
-	{
-		
-	}
+		public void ShapeCanvas(ArtController app)
+		{
+			
+		}
+	
 }
