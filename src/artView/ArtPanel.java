@@ -191,7 +191,23 @@ public class ArtPanel extends JPanel
 				}
 				});
 			
-		
+		rectangleButton.addActionListener(new ActionListener()
+				{
+					public void actionPerformed(ActionEvent click)
+					{
+					Rectangle rectangle = createRectangle();
+					canvas.addShape(rectangle);
+					}
+				});
+		triangleButton.addActionListener(new ActionListener()
+		{
+			public void actionPerformed(ActionEvent click)
+			{
+			Polygon triangle = createPolygon(3);
+			canvas.addShape(triangle);
+			}
+		});
+		}
 	}
 	private Rectangle createRectangle()
 	{
