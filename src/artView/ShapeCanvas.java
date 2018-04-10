@@ -69,9 +69,11 @@ public class ShapeCanvas extends JPanel
 		{
 			
 		}
+		@Override
 		protected void paintComponent(Graphics graphics)
 		{
-			
+			super.paintComponent(graphics);
+			graphics.drawImage(canvasImage, 0, 0, null);
 		}
 	
 }
