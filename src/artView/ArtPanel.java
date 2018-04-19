@@ -207,6 +207,14 @@ public class ArtPanel extends JPanel
 			canvas.addShape(triangle);
 			}
 		});
+		polygonButton.addActionListener(new ActionListener()	
+		{
+			public void actionPerformed(ActionEvent click)
+			{
+				Polygon polygon = createPolygon(currentEdgeCount);
+				canvas.addShape(polygon);
+			}
+		});
 		
 	}
 	private Rectangle createRectangle()
