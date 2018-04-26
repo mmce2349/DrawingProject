@@ -8,6 +8,7 @@ import java.awt.Graphics2D;
 import java.awt.Polygon;
 import java.awt.Rectangle;
 import java.awt.Shape;
+import java.awt.event.MouseMotionListener;
 import java.awt.geom.Ellipse2D;
 import java.awt.image.BufferedImage;
 import java.io.File;
@@ -19,7 +20,7 @@ import javax.swing.JFileChooser;
 import javax.swing.JPanel;
 
 import artController.ArtController;
-public class ShapeCanvas extends JPanel
+public class ShapeCanvas extends JPanel implements MouseMotionListener
 {
 	
 	private ArrayList<Polygon> triangleList;
@@ -124,6 +125,16 @@ public class ShapeCanvas extends JPanel
 		{
 			super.paintComponent(graphics);
 			graphics.drawImage(canvasImage, 0, 0, null);
+		}
+		@Override
+		public void mouseDragged(MouseEvent e)
+		{
+			
+		}
+		@Override
+		public void mouseMoved(MouseEvent e)
+		{
+			
 		}
 	
 }

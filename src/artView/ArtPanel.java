@@ -215,6 +215,19 @@ public class ArtPanel extends JPanel
 				canvas.addShape(polygon);
 			}
 		});
+		canvas.addMouseMotionListener(new MouseMotionListener()
+				{
+				@Override
+				public void mouseDragged(MouseEvent e)
+				{
+				
+				}
+				@Override
+				public void mouseMoved(MouseEvent e)
+				{
+				changeBackground();
+				}
+				}
 		
 	}
 	private Rectangle createRectangle()
