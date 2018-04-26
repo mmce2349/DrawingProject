@@ -104,6 +104,12 @@ public class ShapeCanvas extends JPanel
 			
 			updateImage();
 		}
+		
+		public void resetLine()
+		{
+			previousX = Integer.MIN_VALUE;
+			previousY = Integer.MIN_VALUE;
+		}
 		public void save ()
 		{
 			
