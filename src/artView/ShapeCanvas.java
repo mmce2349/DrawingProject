@@ -28,13 +28,17 @@ public class ShapeCanvas extends JPanel
 	private ArrayList<Ellipse2D> ellipseList;
 	private ArrayList<Rectangle> rectangleList;
 	private ArtController app;
-
+	private int previousX;
+	private int previousY;
 	private BufferedImage canvasImage;
 
 		public void ShapeCanvas(ArtController app)
 		{
 			super();
 			this.app = app;
+			
+			previousX = Integer.MIN_VALUE;
+			previousY = Integer.MIN_VALUE;
 			triangleList = new ArrayList<Polygon>();
 			polygonList = new ArrayList<Polygon>();
 			ellipseList = new ArrayList<Ellipse2D>();
