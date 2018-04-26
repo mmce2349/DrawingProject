@@ -85,7 +85,8 @@ public class ShapeCanvas extends JPanel
 			Graphics2D current = canvasImage.createGraphics();
 			current.setPaint(Color.DARK_GRAY);
 			current.setStroke(new BasicStroke(3));
-			
+			current.drawLine(xPosition, yPosition, xPosition, yPosition);
+			updateImage();
 		}
 		public void save ()
 		{
