@@ -20,7 +20,7 @@ import javax.swing.JFileChooser;
 import javax.swing.JPanel;
 
 import artController.ArtController;
-public class ShapeCanvas extends JPanel implements MouseMotionListener
+public class ShapeCanvas extends JPanel  
 {
 	
 	private ArrayList<Polygon> triangleList;
@@ -75,6 +75,16 @@ public class ShapeCanvas extends JPanel implements MouseMotionListener
 		}
 		public void changeBackground()
 		{
+			Graphics2D current = canvasImage.createGraphics();
+			current.setPaint(randomColor());
+			current.fillRect(0, 0, canvasImage.getWidth(), canvasImage.getHeight());
+			updateImage();
+		}
+		public void drawOnCanvas(int xPosition, int yPosition)
+		{
+			Graphics2D current = canvasImage.createGraphics();
+			current.setPaint(Color.DARK_GRAY);
+			current.setStroke(new BasicStroke(3));
 			
 		}
 		public void save ()
@@ -126,15 +136,6 @@ public class ShapeCanvas extends JPanel implements MouseMotionListener
 			super.paintComponent(graphics);
 			graphics.drawImage(canvasImage, 0, 0, null);
 		}
-		@Override
-		public void mouseDragged(MouseEvent e)
-		{
-			
-		}
-		@Override
-		public void mouseMoved(MouseEvent e)
-		{
-			
-		}
+	
 	
 }
