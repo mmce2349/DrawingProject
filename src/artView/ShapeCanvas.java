@@ -84,11 +84,11 @@ public class ShapeCanvas extends JPanel
 			current.fillRect(0, 0, canvasImage.getWidth(), canvasImage.getHeight());
 			updateImage();
 		}
-		public void drawOnCanvas(int xPosition, int yPosition)
+		public void drawOnCanvas(int xPosition, int yPosition, int LineWidth)
 		{
 			Graphics2D current = canvasImage.createGraphics();
 			current.setPaint(Color.DARK_GRAY);
-			current.setStroke(new BasicStroke(3));
+			current.setStroke(new BasicStroke(LineWidth));
 			
 			if(previousX == Integer.MIN_VALUE)
 			{
