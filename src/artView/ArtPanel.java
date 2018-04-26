@@ -227,11 +227,37 @@ public class ArtPanel extends JPanel
 				@Override
 				public void mouseMoved(MouseEvent e)
 				{
-				changeBackground();
-				}
+					
 				}
 		
-	}
+	});
+		canvas.addMouseListener(new MouseListener()
+				
+			{
+				@Override 
+				public void mouseClicked(MouseEvent e)
+				{
+					
+				}
+				@Override
+				public void mousePressed(MouseEvent e)
+				{
+					
+				}
+				@Override
+				public void mouseReleased(MouseEvent e)
+				{
+					canvas.resetLine();
+				}
+				@Override
+				public void mouseEntered(MouseEvent e)
+				{}
+				@Override
+				public void mouseExited(MouseEvent e)
+				{
+					canvas.resetLine();
+				}
+			});
 	private Rectangle createRectangle()
 	{
 		Rectangle currentRectangle;
