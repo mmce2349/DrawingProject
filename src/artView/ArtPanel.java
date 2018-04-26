@@ -222,7 +222,7 @@ public class ArtPanel extends JPanel
 				{
 					int x = drag.getX();
 					int y = drag.getY();
-					canvas.drawOnCanvas(x,y,currentScale);
+					canvas.drawOnCanvas(x,y,currentEdgeCount);
 				}
 				@Override
 				public void mouseMoved(MouseEvent e)
