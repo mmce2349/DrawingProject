@@ -34,7 +34,7 @@ public class ShapeCanvas extends JPanel
 
 		public void ShapeCanvas(ArtController app)
 		{
-			super();
+		
 			this.app = app;
 			
 			previousX = Integer.MIN_VALUE;
