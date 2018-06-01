@@ -16,6 +16,7 @@ import javax.swing.event.ChangeListener;
 
 import artController.ArtController;
 
+
 public class ArtPanel extends JPanel
 {
 	private final int MINIMUM_EDGE = 5;
@@ -53,7 +54,7 @@ public class ArtPanel extends JPanel
 		scaleSlider = new JSlider(MINIMUM_SCALE, MINIMUM_SCALE);
 		edgeSlider = new JSlider(MINIMUM_EDGE,MINIMUM_EDGE);
 		
-		canvas = new ShapeCanvas(app);
+		canvas = new ShapeCanvas();
 		sliderPanel = new JPanel();
 		appLayout.putConstraint(SpringLayout.NORTH, sliderPanel, 0, SpringLayout.NORTH, this);
 		appLayout.putConstraint(SpringLayout.WEST, sliderPanel, 20, SpringLayout.EAST, this);
@@ -215,49 +216,50 @@ public class ArtPanel extends JPanel
 				canvas.addShape(polygon);
 			}
 		});
-		canvas.addMouseMotionListener(new MouseMotionListener()
-				{
-				@Override
-				public void mouseDragged(MouseEvent e)
-				{
-					int x = drag.getX();
-					int y = drag.getY();
-					canvas.drawOnCanvas(x,y,currentEdgeCount);
-				}
-				@Override
-				public void mouseMoved(MouseEvent e)
-				{
-					
-				}
-		
-	});
-		canvas.addMouseListener(new MouseListener()
-				
-			{
-				@Override 
-				public void mouseClicked(MouseEvent e)
-				{
-					
-				}
-				@Override
-				public void mousePressed(MouseEvent e)
-				{
-					
-				}
-				@Override
-				public void mouseReleased(MouseEvent e)
-				{
-					canvas.resetLine();
-				}
-				@Override
-				public void mouseEntered(MouseEvent e)
-				{}
-				@Override
-				public void mouseExited(MouseEvent e)
-				{
-					canvas.resetLine();
-				}
-			});
+//		canvas.addMouseMotionListener(new MouseMotionListener()
+//				{
+//				@Override
+//				public void mouseDragged(MouseEvent e)
+//				{
+//					int x = drag.getX();
+//					int y = drag.getY();
+//					canvas.drawOnCanvas(x,y,currentEdgeCount);
+//				}
+//				@Override
+//				public void mouseMoved(MouseEvent e)
+//				{
+//					
+//				}
+//		
+//	});
+//		canvas.addMouseListener(new MouseListener()
+//				
+//			{
+//				@Override 
+//				public void mouseClicked(MouseEvent e)
+//				{
+//					
+//				}
+//				@Override
+//				public void mousePressed(MouseEvent e)
+//				{
+//					
+//				}
+//				@Override
+//				public void mouseReleased(MouseEvent e)
+//				{
+//					canvas.resetLine();
+//				}
+//				@Override
+//				public void mouseEntered(MouseEvent e)
+//				{}
+//				@Override
+//				public void mouseExited(MouseEvent e)
+//				{
+//					canvas.resetLine();
+//				}
+//			});
+	}
 	private Rectangle createRectangle()
 	{
 		Rectangle currentRectangle;
