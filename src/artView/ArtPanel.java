@@ -15,7 +15,7 @@ import javax.swing.event.ChangeEvent;
 import javax.swing.event.ChangeListener;
 
 import artController.ArtController;
-
+import artView.ShapeCanvas;
 
 public class ArtPanel extends JPanel
 {
@@ -55,10 +55,13 @@ public class ArtPanel extends JPanel
 		edgeSlider = new JSlider(MINIMUM_EDGE,MINIMUM_EDGE);
 		
 		canvas = new ShapeCanvas();
+		appLayout.putConstraint(SpringLayout.NORTH, canvas, 50, SpringLayout.NORTH, this);
+		appLayout.putConstraint(SpringLayout.WEST, canvas, 50, SpringLayout.WEST, this);
 		sliderPanel = new JPanel();
 		appLayout.putConstraint(SpringLayout.NORTH, sliderPanel, 0, SpringLayout.NORTH, this);
 		appLayout.putConstraint(SpringLayout.WEST, sliderPanel, 20, SpringLayout.EAST, this);
 		buttonPanel = new JPanel(new GridLayout(0,1));
+		appLayout.putConstraint(SpringLayout.NORTH, buttonPanel, 0, SpringLayout.NORTH, this);
 		appLayout.putConstraint(SpringLayout.WEST, buttonPanel, 40, SpringLayout.EAST, this);
 		appLayout.putConstraint(SpringLayout.EAST, buttonPanel, 0, SpringLayout.EAST, this);
 		appLayout.putConstraint(SpringLayout.SOUTH, sliderPanel, 0, SpringLayout.SOUTH, buttonPanel);
